@@ -107,13 +107,11 @@ function Dashboard() {
         variant: "default",
       });
     } catch (error) {
-      const axiosError = error as AxiosError<ApiResponse>;
+  
       toast({
         title: "Error",
-        description:
-          axiosError.response?.data.messages ??
-          "Failed to update message setting",
-        varient: "destructive",
+        description:"Failed to update message setting",
+        variant: "destructive",
       });
     }
   };
